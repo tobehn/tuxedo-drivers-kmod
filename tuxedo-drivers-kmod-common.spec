@@ -32,7 +32,7 @@
     tuxi_acpi
 
 Name:     %{short}-kmod-common
-Version:  4.11.2
+Version:  4.11.3
 Release:  1%{?dist}
 Summary:  Tuxedo drivers kmod common files
 License:  GPLv2
