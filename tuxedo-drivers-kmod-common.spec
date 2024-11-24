@@ -35,7 +35,7 @@ Name:     %{short}-kmod-common
 Version:  4.11.3
 Release:  1%{?dist}
 Summary:  Tuxedo drivers kmod common files
-License:  GPLv2
+License:  GPL-2.0-or-later
 URL:      https://github.com/gladion136/tuxedo-drivers-kmod
 
 Requires: %{short}-kmod >= %{version}
