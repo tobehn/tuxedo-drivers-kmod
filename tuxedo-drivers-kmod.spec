@@ -7,7 +7,7 @@ Name:     tuxedo-drivers-kmod
 Version:  4.11.2
 Release:  1%{?dist}
 Summary:  Tuxedo drivers as kmod
-License:  GPLv2
+License:  GPL-2.0-or-later
 URL:      https://gitlab.com/tuxedocomputers/development/packages/tuxedo-drivers
 
 Source:   %{url}/-/archive/v%{version}/tuxedo-drivers-v%{version}.tar.gz
