@@ -4,7 +4,11 @@
 %endif
 
 Name:     tuxedo-drivers-kmod
+<<<<<<< HEAD
 Version:  4.12.1
+=======
+Version:  4.12.2
+>>>>>>> cf513e4d322e342f19a2c0fe9058e5151c39ca69
 Release:  1%{?dist}
 Summary:  Tuxedo drivers as kmod
 License:  GPL-2.0-or-later
@@ -74,5 +78,3 @@ cp 61-sensor-infinityflex.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
 %config(noreplace) %{_sysconfdir}/modprobe.d/tuxedo_keyboard.conf
 
 %changelog
-* Sat Nov 23 2024 Etienne Schmidt <gladion136@googlemail.com> - 4.11.2-1
-- Initial release of tuxedo-drivers-kmod
