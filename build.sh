@@ -1,4 +1,7 @@
 #/bin/sh
+
+set -ouex pipefail
+
 # Build script for Tuxedo drivers
 # Builts: tuxedo-drivers-kmod-common, kmod-tuxedo-drivers (for your kernel) and akmod-tuxedo-drivers
 
