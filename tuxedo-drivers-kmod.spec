@@ -55,21 +55,21 @@ cp tuxedo_keyboard.conf %{buildroot}/%{_sysconfdir}/modprobe.d/tuxedo_keyboard.c
 
 # Copy udev rules
 mkdir -p %{buildroot}/usr/lib/udev/rules.d/
+cp 99-tuxedo-fix-systemd-led-bootdelay.rules %{buildroot}/usr/lib/udev/rules.d/
 cp 99-tuxedo-fix-infinity-flex-touchpanel-toggle.rules %{buildroot}/usr/lib/udev/rules.d/
 cp 99-tuxedo-fix-nb02-touchpad-mouse.rules %{buildroot}/usr/lib/udev/rules.d/
-cp 99-tuxedo-fix-systemd-led-bootdelay.rules %{buildroot}/usr/lib/udev/rules.d/
 
 # Copy udev hwdb
 mkdir -p %{buildroot}/usr/lib/udev/hwdb.d/
-cp 61-keyboard-tuxedo.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
 cp 61-sensor-tuxedo.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
+cp 61-keyboard-tuxedo.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
 
 %{?akmod_install}
 
 %files
+/usr/lib/udev/rules.d/99-tuxedo-fix-systemd-led-bootdelay.rules
 /usr/lib/udev/rules.d/99-tuxedo-fix-infinity-flex-touchpanel-toggle.rules
 /usr/lib/udev/rules.d/99-tuxedo-fix-nb02-touchpad-mouse.rules
-/usr/lib/udev/rules.d/99-tuxedo-fix-systemd-led-bootdelay.rules
 /usr/lib/udev/hwdb.d/61-sensor-tuxedo.hwdb
 /usr/lib/udev/hwdb.d/61-keyboard-tuxedo.hwdb
 %doc README.md
