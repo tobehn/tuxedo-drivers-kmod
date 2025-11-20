@@ -1,5 +1,12 @@
+# Standard: kein akmod-Layout, sondern reines kmod (für Container/bootc-Images)
+%global with_akmod 0
+
 %if 0%{?fedora}
+%if 0%{?with_akmod}
 %global buildforkernels akmod
+%else
+%global buildforkernels kmod
+%endif
 %global debug_package %{nil}
 %endif
 
@@ -63,6 +70,12 @@ cp 99-tuxedo-fix-nb02-touchpad-mouse.rules %{buildroot}/usr/lib/udev/rules.d/
 mkdir -p %{buildroot}/usr/lib/udev/hwdb.d/
 cp 61-sensor-tuxedo.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
 cp 61-keyboard-tuxedo.hwdb %{buildroot}/usr/lib/udev/hwdb.d/
+
+%if 0%{?with_akmod}
+# akmod-Modus
+%else
+%global akmod_install %{nil}
+%endif
 
 %{?akmod_install}
 
